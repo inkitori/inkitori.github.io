@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "PixelMplus10";
+  src: url("fonts/PixelMplus10-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --text: #111;
-  --muted: #9aa0a6;
-  --rule: #e5e7eb;
-  --link: #111;
-  --bg: #fff;
+  --bg: #0e0d12;
+  --text: #c9b8c0;
+  --muted: #8a7d85;
+  --rule: #2a2530;
+  --link: #ff6cb5;
+  --accent: #ff6cb5;
 }
 
 * { box-sizing: border-box; }
@@ -16,11 +25,14 @@ html, body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "DotGothic16", "PixelMplus10", ui-monospace, monospace;
+  font-weight: 400;
   font-size: 17px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  image-rendering: pixelated;
 }
 
 main {
@@ -38,10 +50,12 @@ header {
 }
 
 h1 {
-  font-size: 22px;
-  font-weight: 700;
+  font-family: "DotGothic16", "PixelMplus10", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
+  color: var(--accent);
 }
 
 header img {
@@ -55,11 +69,14 @@ p { margin: 0 0 22px; }
 a {
   color: var(--link);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
 
-a:hover { text-decoration-thickness: 2px; }
+a:hover {
+  text-decoration-thickness: 2px;
+  color: #ffa3cf;
+}
 
 .projects {
   list-style: none;
@@ -75,11 +92,14 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .project-name {
-  font-weight: 600;
+  font-family: "DotGothic16", "PixelMplus10", monospace;
+  font-weight: 400;
+  font-size: 17px;
   white-space: nowrap;
   min-width: 220px;
   flex-shrink: 0;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .project-desc {
@@ -95,6 +115,8 @@ a:hover { text-decoration-thickness: 2px; }
 }
 
 .project-desc { color: var(--text); }
+
+.row .label { color: var(--muted); }
 
 footer {
   margin-top: 56px;
