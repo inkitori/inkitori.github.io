@@ -112,6 +112,39 @@ a:hover {
   color: #ffa3cf;
 }
 
+.papers {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.papers li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.paper-title {
+  font-family: "DotGothic16", "PixelMplus10", monospace;
+  font-weight: 400;
+  font-size: 17px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.paper-authors {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.paper-venue {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .projects {
   list-style: none;
   padding: 0;
