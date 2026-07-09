@@ -161,6 +161,9 @@ a:hover {
   font-family: "DotGothic16", "PixelMplus10", monospace;
   font-weight: 400;
   font-size: 17px;
+}
+
+a.paper-title {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
